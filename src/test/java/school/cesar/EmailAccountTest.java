@@ -2,11 +2,9 @@ package school.cesar;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import school.cesar.utils.EmailAccountBuilder;
 
-import java.time.Instant;
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.Collection;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
@@ -25,7 +23,7 @@ public class EmailAccountTest {
     }
 
     @Test
-    public void testUserValid(){
+    public void userValidTest_True(){
         EmailAccount emailAccountTest = emailAccountBuilder.setUser("UserValid")
                 .setDomain("UserDamain1")
                 .setPassword("123456")
@@ -35,7 +33,7 @@ public class EmailAccountTest {
     }
 
     @Test
-    public void testUserInvalid(){
+    public void userInvalidTest_False(){
         EmailAccount emailAccountTest = emailAccountBuilder.setUser("A!@#A")
                 .setDomain("UserDamain1")
                 .setPassword("123456")
@@ -45,7 +43,7 @@ public class EmailAccountTest {
     }
 
     @Test
-    public void testDomainValid(){
+    public void domainValidTest_True(){
         EmailAccount emailAccountTest = emailAccountBuilder.setUser("Domain_Val-i.d")
                 .setDomain("DomainValid")
                 .setPassword("123456")
@@ -55,7 +53,7 @@ public class EmailAccountTest {
     }
 
     @Test
-    public void testDomainInvalid(){
+    public void domainInvalidTest_False(){
         EmailAccount emailAccountTest = emailAccountBuilder.setUser("Domain!Val@i.d")
                 .setDomain("!@#$")
                 .setPassword("123456")
@@ -65,7 +63,7 @@ public class EmailAccountTest {
     }
 
     @Test
-    public void testPasswordExpirationTrue(){
+    public void passwordExpirationTest_True(){
         EmailAccount emailAccountTest = emailAccountBuilder.setUser("UserValid")
                 .setDomain("!@#$")
                 .setPassword("123456")
@@ -76,7 +74,7 @@ public class EmailAccountTest {
     }
 
     @Test
-    public void testPasswordExpirationFalse(){
+    public void passwordExpirationTest_False(){
         EmailAccount emailAccountTest = emailAccountBuilder.setUser("UserValid")
                 .setDomain("!@#$")
                 .setPassword("123456")
@@ -87,7 +85,7 @@ public class EmailAccountTest {
     }
 
     @Test
-    public void testSetLastPasswordUpdate(){
+    public void setLastPasswordUpdateTest_Sucess(){
         EmailAccount emailAccountTest = emailAccountBuilder.setUser("Domain!Val@i.d")
                 .setDomain("!@#$")
                 .setPassword("123456")

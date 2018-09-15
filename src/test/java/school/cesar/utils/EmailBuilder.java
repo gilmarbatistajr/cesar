@@ -1,4 +1,6 @@
-package school.cesar;
+package school.cesar.utils;
+
+import school.cesar.Email;
 
 import java.time.Instant;
 import java.util.Collection;

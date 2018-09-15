@@ -65,7 +65,6 @@ public class EmailClient {
                 throw new RuntimeException();
         }
             emailService.sendEmail(email);
-
     }
 
     public boolean createAccount(EmailAccount account){
@@ -86,7 +85,4 @@ public class EmailClient {
         return true;
     }
 
-    public EmailService getService(){
-        return this.emailService;
-    }
 }
