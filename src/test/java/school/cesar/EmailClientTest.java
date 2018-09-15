@@ -151,6 +151,7 @@ public class EmailClientTest{
                 .setLastPasswordUpdate(LocalDate.now())
                 .build();
 
+        emailClient.setEmailService(service);
         Assertions.assertDoesNotThrow( () -> {
             emailClient.emailList(emailAccountTest);
         });
