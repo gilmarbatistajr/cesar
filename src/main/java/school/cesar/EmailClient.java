@@ -22,13 +22,19 @@ public class EmailClient {
         Matcher matcher = pattern.matcher(emailAddress);
         if (matcher.find()) {
             return true;
-        } else {
+        }
+        return false;
+    }
+
+    public boolean isValidCreationDate(Email email){
+        if (email.getCreationDate() == null) { //verified Create Date
             return false;
         }
+        return true;
     }
 
     public boolean isValidEmail(Email email) {
-        if (email.getCreationDate() == null) { //verified Create Date
+        if (isValidCreationDate(email)==false) { //verified Create Date
             return false;
         }
         List<String> listTo = new ArrayList(email.getTo());
