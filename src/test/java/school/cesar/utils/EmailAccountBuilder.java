@@ -1,4 +1,6 @@
-package school.cesar;
+package school.cesar.utils;
+
+import school.cesar.EmailAccount;
 
 import java.time.LocalDate;
 

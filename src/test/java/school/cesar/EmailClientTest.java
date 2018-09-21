@@ -1,8 +1,14 @@
 package school.cesar;
 
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.Mock;
+import school.cesar.utils.EmailAccountBuilder;
+import school.cesar.utils.EmailBuilder;
+import school.cesar.utils.MockitoExtension;
 
 import java.time.Instant;
 import java.time.LocalDate;
@@ -10,13 +16,18 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.when;
 
+@ExtendWith(MockitoExtension.class)
 public class EmailClientTest{
 
     EmailBuilder emailBuilder;
     EmailAccountBuilder emailAccountBuilder;
 
     EmailClient emailClient;
+
+    @Mock EmailService service;
 
 
     private Collection<String> to;
@@ -37,7 +48,7 @@ public class EmailClientTest{
     }
 
     @Test
-    public void testEmailValid(){
+    public void isValidEmailTest_withEmailValid_True(){
         this.to.add(emailValid);
         this.bcc.add(emailValid);
         this.cc.add(emailValid);
@@ -53,7 +64,7 @@ public class EmailClientTest{
     }
 
     @Test
-    public void testEmailInvalidWithoutCreationDate(){
+    public void isValidEmailTest_WithoutCreationDate_False(){
         this.to.add(emailInvalid);
         this.bcc.add(emailValid);
         this.cc.add(emailValid);
@@ -69,7 +80,7 @@ public class EmailClientTest{
     }
 
     @Test
-    public void testEmailInvalidWithTOInvalid(){
+    public void isValidEmailTest_WithEmailTOInvalid_False(){
         this.to.add(emailInvalid);
         this.bcc.add(emailValid);
         this.cc.add(emailValid);
@@ -85,7 +96,7 @@ public class EmailClientTest{
     }
 
     @Test
-    public void testEmailInvalidWithCCInvalid(){
+    public void isValidEmailTest_WithEmailCCInvalid_False(){
         this.to.add(emailValid);
         this.bcc.add(emailValid);
         this.cc.add(emailInvalid);
@@ -101,7 +112,7 @@ public class EmailClientTest{
     }
 
     @Test
-    public void testEmailInvalidWithBCCInvalid(){
+    public void isValidEmailTest_WithEmailBCCInvalid_False(){
         this.to.add(emailValid);
         this.bcc.add(emailInvalid);
         this.cc.add(emailValid);
@@ -117,7 +128,7 @@ public class EmailClientTest{
     }
 
     @Test
-    public void testEmailInvalidWithFromInvalid(){
+    public void isValidEmailTest_WithFromInvalid_False(){
         this.to.add(emailValid);
         this.bcc.add(emailValid);
         this.cc.add(emailValid);
@@ -132,8 +143,9 @@ public class EmailClientTest{
         assertFalse(emailClient.isValidEmail(emailTest));
     }
 
-   /* @Test
-    public void testEmailListWithPasswordValid() throws RuntimeException {
+    @Test
+    @Disabled
+    public void isValidEmailTest_WithPasswordValid_Sucess() throws RuntimeException {
         EmailAccount emailAccountTest = emailAccountBuilder.setUser("UserName")
                 .setDomain("UserDamain")
                 .setPassword("123456")
@@ -143,10 +155,11 @@ public class EmailClientTest{
         Assertions.assertDoesNotThrow( () -> {
             emailClient.emailList(emailAccountTest);
         });
+        
     }
-*/
+
     @Test
-    public void testEmailListWithPasswordInvalid() throws RuntimeException{
+    public void emailListTest_WithPasswordInvalid_Fail() throws RuntimeException{
         EmailAccount emailAccountTest = emailAccountBuilder.setUser("UserName")
                                                            .setDomain("UserDamain")
                                                            .setPassword("12345")
@@ -157,8 +170,8 @@ public class EmailClientTest{
         });
     }
 
-  /*  @Test() //NullPointException por causa da falta da implementação do sendEmail
-    public void testSendEmailWithEmailValid() throws RuntimeException{
+    @Test
+    public void sendEmailTest_WithEmailValid_Sucess(){
         this.to.add(emailValid);
         this.bcc.add(emailValid);
         this.cc.add(emailValid);
@@ -171,13 +184,15 @@ public class EmailClientTest{
                 .setSubject("subject")
                 .build();
 
+        when(service.sendEmail(any(Email.class))).thenReturn(true);
+        emailClient.setEmailService(service);
         Assertions.assertDoesNotThrow( () -> {
             emailClient.sendEmail(emailTest);
         });
-    }*/
+    }
 
     @Test
-    public void testSendEmailWithEmailInvalid() throws RuntimeException{
+    public void sendEmailTest_WithEmailInvalid_Fail() throws RuntimeException{
         this.to.add(emailInvalid);
         this.bcc.add(emailValid);
         this.cc.add(emailValid);
@@ -196,7 +211,7 @@ public class EmailClientTest{
     }
 
     @Test
-    public void testCreateAccountValid(){
+    public void createAccountTest_WithUserDomainPasswordValid_True(){
         EmailAccount emailAccountTest = emailAccountBuilder.setUser("12")
                 .setDomain("UserDamain1")
                 .setPassword("123456")
@@ -205,12 +220,35 @@ public class EmailClientTest{
         assertTrue(emailClient.createAccount(emailAccountTest));
     }
 
-    @Test //verified corret comportament method
-    public void testSetEmailService(){
-        Assertions.assertDoesNotThrow( () -> {
-            emailClient.setEmailService(emailClient.getService());
-        });
-
+    @Test
+    public void createAccountTest_WithUserInvalid_DomainAndPasswordValid_False(){
+        EmailAccount emailAccountTest = emailAccountBuilder.setUser("!1!@#2")
+                .setDomain("UserDamain1")
+                .setPassword("123456")
+                .setLastPasswordUpdate(LocalDate.now())
+                .build();
+        assertFalse(emailClient.createAccount(emailAccountTest));
     }
+
+    @Test
+    public void createAccountTest_WithDomainInvalid_UserAndPasswordValid_False(){
+        EmailAccount emailAccountTest = emailAccountBuilder.setUser("User")
+                .setDomain("UserDamain@#$")
+                .setPassword("123456")
+                .setLastPasswordUpdate(LocalDate.now())
+                .build();
+        assertFalse(emailClient.createAccount(emailAccountTest));
+    }
+
+    @Test
+    public void createAccountTest_WithPasswordInvalid_UserAndDomainValid_False(){
+        EmailAccount emailAccountTest = emailAccountBuilder.setUser("User")
+                .setDomain("UserDamain")
+                .setPassword("12345")
+                .setLastPasswordUpdate(LocalDate.now())
+                .build();
+        assertFalse(emailClient.createAccount(emailAccountTest));
+    }
+
 
 }
