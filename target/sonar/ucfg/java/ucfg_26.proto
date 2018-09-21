@@ -1,0 +1,57 @@
+
+<school.cesar.EmailClient#isValidAddress(Ljava/lang/String;)Z
+__unknown_file (emailAddress"3*Ç
+1[
+QC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailClient.java ("e
+[
+QC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailClient.java (
+""*Ç
+2[
+QC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailClient.java ("e
+[
+QC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailClient.java (
+""*ý
+3[
+QC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailClient.java (!Ÿ
+œ
+[
+QC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailClient.javaW (o
+%0"__id*1*/
+java.util.regex.Pattern"
+CASE_INSENSITIVE‰
+†
+[
+QC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailClient.java (p
+%1"Mjava.util.regex.Pattern#compile(Ljava/lang/String;I)Ljava/util/regex/Pattern;*"
+java.util.regex.Pattern*-+
+)^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}$*
+
+%0x
+v
+[
+QC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailClient.java (q	
+pattern"__id*
+
+%1Ù
+Ö
+[
+QC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailClient.java (7
+%2"Rjava.util.regex.Pattern#matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;*
+	
+pattern*
+
+emailAddressx
+v
+[
+QC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailClient.java (8	
+matcher"__id*
+
+%2”
+‘
+[
+QC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailClient.java (
+%3"java.util.regex.Matcher#find()Z*
+	
+matcher*
+2
+1

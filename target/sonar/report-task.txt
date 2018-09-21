@@ -1,0 +1,7 @@
+organization=gilmarbatistajr-github
+projectKey=gilmarbatistajr_cesar
+serverUrl=https://sonarcloud.io
+serverVersion=7.4.0.17063
+dashboardUrl=https://sonarcloud.io/dashboard?id=gilmarbatistajr_cesar
+ceTaskId=AWX8oROQHR8j8dJrX-nW
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AWX8oROQHR8j8dJrX-nW

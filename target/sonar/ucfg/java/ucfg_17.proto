@@ -1,0 +1,50 @@
+
+:school.cesar.EmailAccount#validDomain(Ljava/lang/String;)Z
+__unknown_file (domain"3*É
+1\
+RC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailAccount.java9 9("f
+\
+RC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailAccount.java9 9(
+""*É
+2\
+RC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailAccount.java7 7("f
+\
+RC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailAccount.java7 7(
+""*Ã
+3\
+RC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailAccount.java4 4(!ò
+ï
+\
+RC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailAccount.java4 4(G
+%0"Ljava.util.regex.Pattern#compile(Ljava/lang/String;)Ljava/util/regex/Pattern;*"
+java.util.regex.Pattern*
+^[a-zA-Z0-9\\._\\-]{1,15}$y
+w
+\
+RC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailAccount.java4 4(H	
+pattern"__id*
+
+%0Ô
+Ñ
+\
+RC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailAccount.java5 5(1
+%1"Rjava.util.regex.Pattern#matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;*
+	
+pattern*
+
+
+domainy
+w
+\
+RC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailAccount.java5 5(2	
+matcher"__id*
+
+%1•
+’
+\
+RC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailAccount.java6 6(
+%2"java.util.regex.Matcher#find()Z*
+	
+matcher*
+2
+1

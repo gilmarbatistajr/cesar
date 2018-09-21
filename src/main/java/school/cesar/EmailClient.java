@@ -28,17 +28,20 @@ public class EmailClient {
     }
 
     public boolean isValidEmail(Email email) {
+        if (email.getCreationDate() == null) { //verified Create Date
+            return false;
+        }
         List<String> listTo = new ArrayList(email.getTo());
         List<String> listBcc = new ArrayList(email.getBcc());
         List<String> listCC = new ArrayList<>(email.getCc());
-        if (email.getCreationDate() != null) { //verified Create Date
-            if (isValidAddress(email.getFrom())==true) { //verified from email
+
+            if (isValidAddress(email.getFrom())) { //verified from email
                 for (String emailTo : listTo) {
-                    if (isValidAddress(emailTo.toString()) == true) { //verified all to email
+                    if (isValidAddress(emailTo.toString())) { //verified all to email
                         for (String emailBcc : listBcc) {
-                            if (isValidAddress(emailBcc.toString()) == true) { //verified all bcc email
+                            if (isValidAddress(emailBcc.toString())) { //verified all bcc email
                                 for (String emailCc : listCC) {
-                                    if (isValidAddress(emailCc.toString()) == true) { //verified all cc email
+                                    if (isValidAddress(emailCc.toString())) { //verified all cc email
                                         return true;
                                     }
                                 }
@@ -47,7 +50,6 @@ public class EmailClient {
                     }
                 }
             }
-        }
         return false;
     }
 
