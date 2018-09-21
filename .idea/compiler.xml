@@ -9,5 +9,8 @@
         <module name="unitProject" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="coverage" target="8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

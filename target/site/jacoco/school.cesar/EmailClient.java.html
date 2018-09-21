@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>EmailClient.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">unitProject</a> &gt; <a href="index.source.html" class="el_package">school.cesar</a> &gt; <span class="el_source">EmailClient.java</span></div><h1>EmailClient.java</h1><pre class="source lang-java linenums">package school.cesar;
+
+
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+
+<span class="fc" id="L12">public class EmailClient {</span>
+
+    private EmailService emailService;
+
+    public void setEmailService(EmailService emailService) {
+<span class="fc" id="L17">        this.emailService = emailService;</span>
+<span class="fc" id="L18">    }</span>
+
+    public boolean isValidAddress(String emailAddress) {
+<span class="fc" id="L21">        Pattern pattern = Pattern.compile(&quot;^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}$&quot;, Pattern.CASE_INSENSITIVE);</span>
+<span class="fc" id="L22">        Matcher matcher = pattern.matcher(emailAddress);</span>
+<span class="fc bfc" id="L23" title="All 2 branches covered.">        if (matcher.find()) {</span>
+<span class="fc" id="L24">            return true;</span>
+        } else {
+<span class="fc" id="L26">            return false;</span>
+        }
+    }
+
+    public boolean isValidEmail(Email email) {
+<span class="fc" id="L31">        List&lt;String&gt; listTo = new ArrayList(email.getTo());</span>
+<span class="fc" id="L32">        List&lt;String&gt; listBcc = new ArrayList(email.getBcc());</span>
+<span class="fc" id="L33">        List&lt;String&gt; listCC = new ArrayList&lt;&gt;(email.getCc());</span>
+<span class="fc bfc" id="L34" title="All 2 branches covered.">        if (email.getCreationDate() != null) { //verified Create Date</span>
+<span class="fc bfc" id="L35" title="All 2 branches covered.">            if (isValidAddress(email.getFrom())==true) { //verified from email</span>
+<span class="fc bfc" id="L36" title="All 2 branches covered.">                for (String emailTo : listTo) {</span>
+<span class="fc bfc" id="L37" title="All 2 branches covered.">                    if (isValidAddress(emailTo.toString()) == true) { //verified all to email</span>
+<span class="fc bfc" id="L38" title="All 2 branches covered.">                        for (String emailBcc : listBcc) {</span>
+<span class="fc bfc" id="L39" title="All 2 branches covered.">                            if (isValidAddress(emailBcc.toString()) == true) { //verified all bcc email</span>
+<span class="fc bfc" id="L40" title="All 2 branches covered.">                                for (String emailCc : listCC) {</span>
+<span class="fc bfc" id="L41" title="All 2 branches covered.">                                    if (isValidAddress(emailCc.toString()) == true) { //verified all cc email</span>
+<span class="fc" id="L42">                                        return true;</span>
+                                    }
+<span class="fc" id="L44">                                }</span>
+                            }
+<span class="fc" id="L46">                        }</span>
+                    }
+<span class="fc" id="L48">                }</span>
+            }
+        }
+<span class="fc" id="L51">        return false;</span>
+    }
+
+    public Collection&lt;Email&gt; emailList(EmailAccount account){
+<span class="pc bpc" id="L55" title="2 of 4 branches missed.">        if(account.getPassword().length()&gt;6 ||account.verifyPasswordExpiration()==false){</span>
+<span class="fc" id="L56">            return emailService.emailList(account);</span>
+        }else{
+<span class="nc" id="L58">            throw new RuntimeException();</span>
+        }
+
+    }
+
+    public void sendEmail(Email email){
+<span class="pc bpc" id="L64" title="1 of 4 branches missed.">        if(isValidEmail(email)==false||emailService.sendEmail(email)==false){</span>
+<span class="fc" id="L65">                throw new RuntimeException();</span>
+        }
+<span class="fc" id="L67">            emailService.sendEmail(email);</span>
+<span class="fc" id="L68">    }</span>
+
+    public boolean createAccount(EmailAccount account){
+<span class="fc bfc" id="L71" title="All 2 branches covered.">        if(account.validUser(account.getUser())==false){</span>
+<span class="fc" id="L72">            return false;</span>
+        }
+<span class="fc bfc" id="L74" title="All 2 branches covered.">        if(account.validDomain(account.getDomain())==false){</span>
+<span class="fc" id="L75">            return false;</span>
+        }
+<span class="fc bfc" id="L77" title="All 2 branches covered.">        if (account.getPassword().length()&lt;6){</span>
+<span class="fc" id="L78">            return false;</span>
+        }
+<span class="fc" id="L80">        account.setLastPasswordUpdate(LocalDate.now());</span>
+<span class="fc" id="L81">        EmailAccount newAccount = new EmailAccount(account.getUser(),</span>
+<span class="fc" id="L82">                                                   account.getDomain(),</span>
+<span class="fc" id="L83">                                                   account.getPassword(),</span>
+<span class="fc" id="L84">                                                   account.getLastPasswordUpdate());</span>
+<span class="fc" id="L85">        return true;</span>
+    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

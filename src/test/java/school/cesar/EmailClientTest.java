@@ -144,7 +144,6 @@ public class EmailClientTest{
     }
 
     @Test
-    @Disabled
     public void isValidEmailTest_WithPasswordValid_Sucess() throws RuntimeException {
         EmailAccount emailAccountTest = emailAccountBuilder.setUser("UserName")
                 .setDomain("UserDamain")
@@ -152,6 +151,7 @@ public class EmailClientTest{
                 .setLastPasswordUpdate(LocalDate.now())
                 .build();
 
+        emailClient.setEmailService(service);
         Assertions.assertDoesNotThrow( () -> {
             emailClient.emailList(emailAccountTest);
         });
@@ -159,9 +159,47 @@ public class EmailClientTest{
     }
 
     @Test
+    public void emailListTest_WithPasswordInvalid_Sucess(){
+        EmailAccount emailAccountTest = emailAccountBuilder.setUser("UserName")
+                .setDomain("UserDomain")
+                .setPassword("12345")
+                .setLastPasswordUpdate(LocalDate.now())
+                .build();
+        this.to.add(emailValid);
+        this.bcc.add(emailValid);
+        this.cc.add(emailValid);
+        Email emailTest = emailBuilder.setBcc(bcc)
+                .setCc(cc)
+                .setFrom(emailValid)
+                .setCreationDate(Instant.now())
+                .setTo(to)
+                .setMessage("message")
+                .setSubject("subject")
+                .build();
+        Collection<Email> resultMock = new ArrayList<Email>();
+        resultMock.add(emailTest);
+        when(service.emailList(any(EmailAccount.class))).thenReturn(resultMock);
+        emailClient.setEmailService(service);
+        assertEquals(resultMock,emailClient.emailList(emailAccountTest));
+
+    }
+
+    @Test
+    public void emailListTest_WithPasswordExpiration_Fail() throws RuntimeException{
+        EmailAccount emailAccountTest = emailAccountBuilder.setUser("UserName")
+                .setDomain("UserDomain")
+                .setPassword("123456")
+                .setLastPasswordUpdate(LocalDate.now().plusDays(100))
+                .build();
+        assertThrows(RuntimeException.class, () -> {
+            emailClient.emailList(emailAccountTest);
+        });
+    }
+
+    @Test
     public void emailListTest_WithPasswordInvalid_Fail() throws RuntimeException{
         EmailAccount emailAccountTest = emailAccountBuilder.setUser("UserName")
-                                                           .setDomain("UserDamain")
+                                                           .setDomain("UserDomain")
                                                            .setPassword("12345")
                                                            .setLastPasswordUpdate(LocalDate.now())
                                                            .build();
@@ -207,7 +245,6 @@ public class EmailClientTest{
         Assertions.assertThrows(RuntimeException.class, () -> {
             emailClient.sendEmail(emailTest);
         });
-
     }
 
     @Test

@@ -4,6 +4,8 @@ import java.time.LocalDate;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import static java.time.temporal.ChronoUnit.DAYS;
+
 public class EmailAccount {
 
     private String user;
@@ -27,8 +29,9 @@ public class EmailAccount {
     }
 
     public boolean verifyPasswordExpiration(){
-        LocalDate date = LocalDate.now().plusDays(90);
-        if(this.lastPasswordUpdate.isAfter(date)){
+        LocalDate date = LocalDate.now();
+        long result =DAYS.between(this.lastPasswordUpdate, date);
+        if(result>90){
             return true;
         }else{
             return false;
