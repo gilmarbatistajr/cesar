@@ -22,9 +22,8 @@ public class EmailClient {
         Matcher matcher = pattern.matcher(emailAddress);
         if (matcher.find()) {
             return true;
-        } else {
-            return false;
         }
+        return false;
     }
 
     public boolean isValidCreationDate(Email email){
@@ -33,36 +32,45 @@ public class EmailClient {
         }
         return true;
     }
+
     public boolean isValidEmail(Email email) {
         List<String> listTo = new ArrayList(email.getTo());
         List<String> listBcc = new ArrayList(email.getBcc());
         List<String> listCC = new ArrayList<>(email.getCc());
-        if (isValidCreationDate(email)==true) { //verified Create Date
-            if (isValidAddress(email.getFrom())==true) { //verified from email
-                for (String emailTo : listTo) {
-                    if (isValidAddress(emailTo.toString()) == true) { //verified all to email
-                        for (String emailBcc : listBcc) {
-                            if (isValidAddress(emailBcc.toString()) == true) { //verified all bcc email
-                                for (String emailCc : listCC) {
-                                    if (isValidAddress(emailCc.toString()) == true) { //verified all cc email
-                                        return true;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
+        if (isValidCreationDate(email) == false) { //verified Create Date
+            return false;
+        }
+
+        if (isValidAddress(email.getFrom()) == false) { //verified from email
+            return false;
+        }
+
+        for (String emailTo : listTo) {//verified all to email
+            if (isValidAddress(emailTo.toString()) == false) {
+                return false;
             }
         }
-        return false;
+
+        for (String emailBcc : listBcc) {//verified all bcc email
+            if (isValidAddress(emailBcc.toString()) == false) {
+                return false;
+            }
+        }
+
+        for (String emailCc : listCC) {
+            if (isValidAddress(emailCc.toString()) == false) { //verified all cc email
+                return false;
+            }
+        }
+
+        return true;
     }
 
     public Collection<Email> emailList(EmailAccount account){
         if(account.getPassword().length()>6 ||account.verifyPasswordExpiration()==false){
             return emailService.emailList(account);
-        }else{
-            throw new RuntimeException();
         }
+        throw new RuntimeException();
 
     }
 

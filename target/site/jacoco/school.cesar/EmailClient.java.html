@@ -27,70 +27,76 @@ import java.util.regex.Pattern;
     }
 
     public boolean isValidCreationDate(Email email){
-<span class="fc bfc" id="L30" title="All 2 branches covered.">        if (email.getCreationDate() == null) { //verified Create Date</span>
+<span class="fc bfc" id="L30" title="All 2 branches covered.">        if (email.getCreationDate() == null) {</span>
 <span class="fc" id="L31">            return false;</span>
         }
 <span class="fc" id="L33">        return true;</span>
     }
 
     public boolean isValidEmail(Email email) {
-<span class="fc bfc" id="L37" title="All 2 branches covered.">        if (isValidCreationDate(email)==false) { //verified Create Date</span>
-<span class="fc" id="L38">            return false;</span>
+<span class="fc" id="L37">        List&lt;String&gt; listTo = new ArrayList(email.getTo());</span>
+<span class="fc" id="L38">        List&lt;String&gt; listBcc = new ArrayList(email.getBcc());</span>
+<span class="fc" id="L39">        List&lt;String&gt; listCC = new ArrayList&lt;&gt;(email.getCc());</span>
+<span class="fc bfc" id="L40" title="All 2 branches covered.">        if (isValidCreationDate(email) == false) { //verified Create Date</span>
+<span class="fc" id="L41">            return false;</span>
         }
-<span class="fc" id="L40">        List&lt;String&gt; listTo = new ArrayList(email.getTo());</span>
-<span class="fc" id="L41">        List&lt;String&gt; listBcc = new ArrayList(email.getBcc());</span>
-<span class="fc" id="L42">        List&lt;String&gt; listCC = new ArrayList&lt;&gt;(email.getCc());</span>
 
-<span class="fc bfc" id="L44" title="All 2 branches covered.">            if (isValidAddress(email.getFrom())) { //verified from email</span>
-<span class="fc bfc" id="L45" title="All 2 branches covered.">                for (String emailTo : listTo) {</span>
-<span class="fc bfc" id="L46" title="All 2 branches covered.">                    if (isValidAddress(emailTo.toString())) { //verified all to email</span>
-<span class="fc bfc" id="L47" title="All 2 branches covered.">                        for (String emailBcc : listBcc) {</span>
-<span class="fc bfc" id="L48" title="All 2 branches covered.">                            if (isValidAddress(emailBcc.toString())) { //verified all bcc email</span>
-<span class="fc bfc" id="L49" title="All 2 branches covered.">                                for (String emailCc : listCC) {</span>
-<span class="fc bfc" id="L50" title="All 2 branches covered.">                                    if (isValidAddress(emailCc.toString())) { //verified all cc email</span>
-<span class="fc" id="L51">                                        return true;</span>
-                                    }
-<span class="fc" id="L53">                                }</span>
-                            }
-<span class="fc" id="L55">                        }</span>
-                    }
-<span class="fc" id="L57">                }</span>
+<span class="fc bfc" id="L44" title="All 2 branches covered.">        if (isValidAddress(email.getFrom()) == false) { //verified from email</span>
+<span class="fc" id="L45">            return false;</span>
+        }
+
+<span class="fc bfc" id="L48" title="All 2 branches covered.">        for (String emailTo : listTo) {//verified all to email</span>
+<span class="fc bfc" id="L49" title="All 2 branches covered.">            if (isValidAddress(emailTo.toString()) == false) {</span>
+<span class="fc" id="L50">                return false;</span>
             }
-<span class="fc" id="L59">        return false;</span>
+<span class="fc" id="L52">        }</span>
+
+<span class="fc bfc" id="L54" title="All 2 branches covered.">        for (String emailBcc : listBcc) {//verified all bcc email</span>
+<span class="fc bfc" id="L55" title="All 2 branches covered.">            if (isValidAddress(emailBcc.toString()) == false) {</span>
+<span class="fc" id="L56">                return false;</span>
+            }
+<span class="fc" id="L58">        }</span>
+
+<span class="fc bfc" id="L60" title="All 2 branches covered.">        for (String emailCc : listCC) {</span>
+<span class="fc bfc" id="L61" title="All 2 branches covered.">            if (isValidAddress(emailCc.toString()) == false) { //verified all cc email</span>
+<span class="fc" id="L62">                return false;</span>
+            }
+<span class="fc" id="L64">        }</span>
+
+<span class="fc" id="L66">        return true;</span>
     }
 
     public Collection&lt;Email&gt; emailList(EmailAccount account){
-<span class="pc bpc" id="L63" title="2 of 4 branches missed.">        if(account.getPassword().length()&gt;6 ||account.verifyPasswordExpiration()==false){</span>
-<span class="fc" id="L64">            return emailService.emailList(account);</span>
-        }else{
-<span class="nc" id="L66">            throw new RuntimeException();</span>
+<span class="pc bpc" id="L70" title="2 of 4 branches missed.">        if(account.getPassword().length()&gt;6 ||account.verifyPasswordExpiration()==false){</span>
+<span class="fc" id="L71">            return emailService.emailList(account);</span>
         }
+<span class="nc" id="L73">        throw new RuntimeException();</span>
 
     }
 
     public void sendEmail(Email email){
-<span class="pc bpc" id="L72" title="1 of 4 branches missed.">        if(isValidEmail(email)==false||emailService.sendEmail(email)==false){</span>
-<span class="fc" id="L73">                throw new RuntimeException();</span>
+<span class="pc bpc" id="L78" title="1 of 4 branches missed.">        if(isValidEmail(email)==false||emailService.sendEmail(email)==false){</span>
+<span class="fc" id="L79">                throw new RuntimeException();</span>
         }
-<span class="fc" id="L75">            emailService.sendEmail(email);</span>
-<span class="fc" id="L76">    }</span>
+<span class="fc" id="L81">            emailService.sendEmail(email);</span>
+<span class="fc" id="L82">    }</span>
 
     public boolean createAccount(EmailAccount account){
-<span class="fc bfc" id="L79" title="All 2 branches covered.">        if(account.validUser(account.getUser())==false){</span>
-<span class="fc" id="L80">            return false;</span>
-        }
-<span class="fc bfc" id="L82" title="All 2 branches covered.">        if(account.validDomain(account.getDomain())==false){</span>
-<span class="fc" id="L83">            return false;</span>
-        }
-<span class="fc bfc" id="L85" title="All 2 branches covered.">        if (account.getPassword().length()&lt;6){</span>
+<span class="fc bfc" id="L85" title="All 2 branches covered.">        if(account.validUser(account.getUser())==false){</span>
 <span class="fc" id="L86">            return false;</span>
         }
-<span class="fc" id="L88">        account.setLastPasswordUpdate(LocalDate.now());</span>
-<span class="fc" id="L89">        EmailAccount newAccount = new EmailAccount(account.getUser(),</span>
-<span class="fc" id="L90">                                                   account.getDomain(),</span>
-<span class="fc" id="L91">                                                   account.getPassword(),</span>
-<span class="fc" id="L92">                                                   account.getLastPasswordUpdate());</span>
-<span class="fc" id="L93">        return true;</span>
+<span class="fc bfc" id="L88" title="All 2 branches covered.">        if(account.validDomain(account.getDomain())==false){</span>
+<span class="fc" id="L89">            return false;</span>
+        }
+<span class="fc bfc" id="L91" title="All 2 branches covered.">        if (account.getPassword().length()&lt;6){</span>
+<span class="fc" id="L92">            return false;</span>
+        }
+<span class="fc" id="L94">        account.setLastPasswordUpdate(LocalDate.now());</span>
+<span class="fc" id="L95">        EmailAccount newAccount = new EmailAccount(account.getUser(),</span>
+<span class="fc" id="L96">                                                   account.getDomain(),</span>
+<span class="fc" id="L97">                                                   account.getPassword(),</span>
+<span class="fc" id="L98">                                                   account.getLastPasswordUpdate());</span>
+<span class="fc" id="L99">        return true;</span>
     }
 
 }
