@@ -20,7 +20,10 @@
     <SUITE FILE_PATH="coverage/unitProject$EmailClientTest.ic" NAME="EmailClientTest Coverage Results" MODIFIED="1536936321554" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>school.cesar.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/unitProject$school_cesar_in_unitProject.ic" NAME="school.cesar in unitProject Coverage Results" MODIFIED="1537546166132" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/unitProject$school_cesar_utils_in_unitProject.ic" NAME="school.cesar.utils in unitProject Coverage Results" MODIFIED="1537547588639" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>school.cesar.utils.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/unitProject$school_cesar_in_unitProject.ic" NAME="school.cesar in unitProject Coverage Results" MODIFIED="1537547608285" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>school.cesar.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/unitProject$EmailAccountTest.ic" NAME="EmailAccountTest Coverage Results" MODIFIED="1536934252690" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
@@ -377,7 +380,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537547268920" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537547719836" />
     <property name="last_opened_file_path" value="$USER_HOME$/IdeaProjects/unittest" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
@@ -444,22 +447,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EmailClientTest.testSendEmailWithEmailValid" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="unitProject" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="school.cesar.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="school.cesar" />
-      <option name="MAIN_CLASS_NAME" value="school.cesar.EmailClientTest" />
-      <option name="METHOD_NAME" value="testSendEmailWithEmailValid" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="school.cesar in unitProject" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="unitProject" />
       <extension name="coverage">
@@ -474,20 +461,34 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="school.cesar.utils in unitProject" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="unitProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="school.cesar.utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="school.cesar.utils" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="JUnit.EmailClientTest.testSendEmailWithEmailValid" />
       <item itemvalue="JUnit.EmailClientTest.createAccountTest_WithUserInvalidAndDomainPasswordValid_False" />
       <item itemvalue="JUnit.EmailClientTest.createAccountTest_WithDomainInvalid_UserAndPasswordValid_False" />
       <item itemvalue="JUnit.EmailClientTest.createAccountTest_WithPasswordInvalid_UserAndDomainValid_False" />
       <item itemvalue="JUnit.school.cesar in unitProject" />
+      <item itemvalue="JUnit.school.cesar.utils in unitProject" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.school.cesar in unitProject" />
+        <item itemvalue="JUnit.school.cesar.utils in unitProject" />
         <item itemvalue="JUnit.EmailClientTest.createAccountTest_WithPasswordInvalid_UserAndDomainValid_False" />
         <item itemvalue="JUnit.EmailClientTest.createAccountTest_WithDomainInvalid_UserAndPasswordValid_False" />
         <item itemvalue="JUnit.EmailClientTest.createAccountTest_WithUserInvalidAndDomainPasswordValid_False" />
-        <item itemvalue="JUnit.EmailClientTest.testSendEmailWithEmailValid" />
       </list>
     </recent_temporary>
   </component>

@@ -2,15 +2,26 @@
 Dschool.cesar.EmailClient#createAccount(Lschool/cesar/EmailAccount;)Z
 __unknown_file (account"7*ñ
 1[
+<<<<<<< HEAD
 QC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailClient.javaP P(Ø
 ¨
 [
 QC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailClient.javaP& P(5
+=======
+QC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailClient.javaR R(Ø
+¨
+[
+QC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailClient.javaR& R(5
+>>>>>>> origin/addSonar
 %6".java.time.LocalDate#now()Ljava/time/LocalDate;*"
 java.time.LocalDateƒ
 ¡
 [
+<<<<<<< HEAD
 QC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailClient.javaP P(6
+=======
+QC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailClient.javaR R(6
+>>>>>>> origin/addSonar
 %7"Gschool.cesar.EmailAccount#setLastPasswordUpdate(Ljava/time/LocalDate;)V*
 	
 account*
@@ -18,34 +29,58 @@ QC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailClient.ja
 %6™
 ß
 [
+<<<<<<< HEAD
 QC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailClient.javaQ3 Q(D
+=======
+QC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailClient.javaS3 S(D
+>>>>>>> origin/addSonar
 %8"5school.cesar.EmailAccount#getUser()Ljava/lang/String;*
 	
 account¨
 ©
 [
+<<<<<<< HEAD
 QC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailClient.javaR3 R(F
+=======
+QC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailClient.javaT3 T(F
+>>>>>>> origin/addSonar
 %9"7school.cesar.EmailAccount#getDomain()Ljava/lang/String;*
 	
 accountØ
 ¨
 [
+<<<<<<< HEAD
 QC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailClient.javaS3 S(H
+=======
+QC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailClient.javaU3 U(H
+>>>>>>> origin/addSonar
 %10"9school.cesar.EmailAccount#getPassword()Ljava/lang/String;*
 	
 accountº
 π
 [
+<<<<<<< HEAD
 QC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailClient.javaT3 T(R
+=======
+QC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailClient.javaV3 V(R
+>>>>>>> origin/addSonar
 %11"Fschool.cesar.EmailAccount#getLastPasswordUpdate()Ljava/time/LocalDate;*
 	
 accountÅ
 [
+<<<<<<< HEAD
 QC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailClient.javaQ& Q(2
 %12"school.cesar.EmailAccountÇ
 ˇ
 [
 QC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailClient.javaQ" T(S
+=======
+QC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailClient.javaS& S(2
+%12"school.cesar.EmailAccountÇ
+ˇ
+[
+QC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailClient.javaS" V(S
+>>>>>>> origin/addSonar
 %13"nschool.cesar.EmailAccount#<init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/time/LocalDate;)V*
 
 %12*
@@ -58,6 +93,7 @@ QC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailClient.ja
 
 %11"e
 [
+<<<<<<< HEAD
 QC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailClient.javaU U(
 ""*«
 2[
@@ -70,18 +106,37 @@ QC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailClient.ja
 ´
 [
 QC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailClient.javaM M(!
+=======
+QC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailClient.javaW W(
+""*«
+2[
+QC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailClient.javaP P("e
+[
+QC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailClient.javaP P(
+""*¶
+3[
+QC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailClient.javaO O(Æ
+´
+[
+QC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailClient.javaO O(!
+>>>>>>> origin/addSonar
 %4"9school.cesar.EmailAccount#getPassword()Ljava/lang/String;*
 	
 accountä
 á
 [
+<<<<<<< HEAD
 QC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailClient.javaM M(*
+=======
+QC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailClient.javaO O(*
+>>>>>>> origin/addSonar
 %5"java.lang.String#length()I*
 
 %4*
 2
 1*«
 4[
+<<<<<<< HEAD
 QC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailClient.javaK K("e
 [
 QC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailClient.javaK K(
@@ -91,12 +146,27 @@ QC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailClient.ja
 ©
 [
 QC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailClient.javaJ J(2
+=======
+QC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailClient.javaM M("e
+[
+QC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailClient.javaM M(
+""*—
+5[
+QC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailClient.javaL L(¨
+©
+[
+QC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailClient.javaL L(2
+>>>>>>> origin/addSonar
 %2"7school.cesar.EmailAccount#getDomain()Ljava/lang/String;*
 	
 account∑
 ¥
 [
+<<<<<<< HEAD
 QC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailClient.javaJ J(3
+=======
+QC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailClient.javaL L(3
+>>>>>>> origin/addSonar
 %3":school.cesar.EmailAccount#validDomain(Ljava/lang/String;)Z*
 	
 account*
@@ -105,6 +175,7 @@ QC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailClient.ja
 3
 4*«
 6[
+<<<<<<< HEAD
 QC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailClient.javaH H("e
 [
 QC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailClient.javaH H(
@@ -114,12 +185,27 @@ QC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailClient.ja
 ß
 [
 QC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailClient.javaG G(.
+=======
+QC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailClient.javaJ J("e
+[
+QC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailClient.javaJ J(
+""*Õ
+7[
+QC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailClient.javaI I(™
+ß
+[
+QC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailClient.javaI I(.
+>>>>>>> origin/addSonar
 %0"5school.cesar.EmailAccount#getUser()Ljava/lang/String;*
 	
 accountµ
 ≤
 [
+<<<<<<< HEAD
 QC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailClient.javaG G(/
+=======
+QC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailClient.javaI I(/
+>>>>>>> origin/addSonar
 %1"8school.cesar.EmailAccount#validUser(Ljava/lang/String;)Z*
 	
 account*
