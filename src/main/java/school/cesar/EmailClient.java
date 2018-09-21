@@ -70,13 +70,13 @@ public class EmailClient {
         if(account.getPassword().length()>6 ||account.verifyPasswordExpiration()==false){
             return emailService.emailList(account);
         }
-        throw new RuntimeException();
+        throw new EmailFailException("Email Fail Exception");
 
     }
 
     public void sendEmail(Email email){
         if(isValidEmail(email)==false||emailService.sendEmail(email)==false){
-                throw new RuntimeException();
+                throw new EmailFailException("Email Fail Exception");
         }
             emailService.sendEmail(email);
     }
@@ -92,10 +92,7 @@ public class EmailClient {
             return false;
         }
         account.setLastPasswordUpdate(LocalDate.now());
-        EmailAccount newAccount = new EmailAccount(account.getUser(),
-                                                   account.getDomain(),
-                                                   account.getPassword(),
-                                                   account.getLastPasswordUpdate());
+        new EmailAccount(account.getUser(),account.getDomain(),account.getPassword(),account.getLastPasswordUpdate());
         return true;
     }
 

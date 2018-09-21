@@ -30,7 +30,7 @@ public class EmailAccount {
 
     public boolean verifyPasswordExpiration(){
         LocalDate date = LocalDate.now();
-        long result =DAYS.between(this.lastPasswordUpdate, date);
+        long result =DAYS.between(date,this.lastPasswordUpdate);
         if(result>90){
             return true;
         }else{

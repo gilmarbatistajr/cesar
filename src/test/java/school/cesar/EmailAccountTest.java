@@ -67,7 +67,7 @@ public class EmailAccountTest {
         EmailAccount emailAccountTest = emailAccountBuilder.setUser("UserValid")
                 .setDomain("!@#$")
                 .setPassword("123456")
-                .setLastPasswordUpdate(LocalDate.now().minusDays(100))
+                .setLastPasswordUpdate(LocalDate.now().plusDays(100))
                 .build();
         assertTrue(emailAccountTest.verifyPasswordExpiration());
 

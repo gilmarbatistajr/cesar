@@ -18,34 +18,34 @@ QC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailClient.ja
 %6™
 ß
 [
-QC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailClient.java_3 _(D
+QC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailClient.java_ _(*
 %8"5school.cesar.EmailAccount#getUser()Ljava/lang/String;*
 	
 account¨
 ©
 [
-QC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailClient.java`3 `(F
+QC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailClient.java_+ _(>
 %9"7school.cesar.EmailAccount#getDomain()Ljava/lang/String;*
 	
 accountØ
 ¨
 [
-QC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailClient.javaa3 a(H
+QC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailClient.java_? _(T
 %10"9school.cesar.EmailAccount#getPassword()Ljava/lang/String;*
 	
 accountº
 π
 [
-QC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailClient.javab3 b(R
+QC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailClient.java_U _(t
 %11"Fschool.cesar.EmailAccount#getLastPasswordUpdate()Ljava/time/LocalDate;*
 	
 accountÅ
 [
-QC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailClient.java_& _(2
+QC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailClient.java_ _(
 %12"school.cesar.EmailAccountÇ
 ˇ
 [
-QC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailClient.java_" b(S
+QC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailClient.java_ _(u
 %13"nschool.cesar.EmailAccount#<init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/time/LocalDate;)V*
 
 %12*
@@ -58,7 +58,7 @@ QC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailClient.ja
 
 %11"e
 [
-QC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailClient.javac c(
+QC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailClient.java` `(
 ""*«
 2[
 QC:\Users\Gilmar\Documents\unitProject\src\main\java\school\cesar\EmailClient.java\ \("e

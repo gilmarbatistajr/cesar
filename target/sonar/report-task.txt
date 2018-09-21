@@ -3,5 +3,5 @@ projectKey=gilmarbatistajr_cesar
 serverUrl=https://sonarcloud.io
 serverVersion=7.4.0.17063
 dashboardUrl=https://sonarcloud.io/dashboard?id=gilmarbatistajr_cesar
-ceTaskId=AWX9DkWx-o61MP5s01NP
-ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AWX9DkWx-o61MP5s01NP
+ceTaskId=AWX9LddOHR8j8dJrX_Fj
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AWX9LddOHR8j8dJrX_Fj

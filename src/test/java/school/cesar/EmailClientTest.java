@@ -144,7 +144,7 @@ public class EmailClientTest{
     }
 
     @Test
-    public void isValidEmailTest_WithPasswordValid_Sucess() throws RuntimeException {
+    public void isValidEmailTest_WithPasswordValid_Sucess() throws EmailFailException {
         EmailAccount emailAccountTest = emailAccountBuilder.setUser("UserName")
                 .setDomain("UserDamain")
                 .setPassword("123456")
@@ -185,11 +185,11 @@ public class EmailClientTest{
     }
 
     @Test
-    public void emailListTest_WithPasswordExpiration_Fail() throws RuntimeException{
+    public void emailListTest_WithPasswordExpiration_Fail() throws EmailFailException{
         EmailAccount emailAccountTest = emailAccountBuilder.setUser("UserName")
                 .setDomain("UserDomain")
                 .setPassword("123456")
-                .setLastPasswordUpdate(LocalDate.now().plusDays(100))
+                .setLastPasswordUpdate(LocalDate.now().plusDays(150))
                 .build();
         assertThrows(RuntimeException.class, () -> {
             emailClient.emailList(emailAccountTest);
@@ -197,7 +197,7 @@ public class EmailClientTest{
     }
 
     @Test
-    public void emailListTest_WithPasswordInvalid_Fail() throws RuntimeException{
+    public void emailListTest_WithPasswordInvalid_Fail() throws EmailFailException{
         EmailAccount emailAccountTest = emailAccountBuilder.setUser("UserName")
                                                            .setDomain("UserDomain")
                                                            .setPassword("12345")
@@ -230,7 +230,7 @@ public class EmailClientTest{
     }
 
     @Test
-    public void sendEmailTest_WithEmailInvalid_Fail() throws RuntimeException{
+    public void sendEmailTest_WithEmailInvalid_Fail() throws EmailFailException{
         this.to.add(emailInvalid);
         this.bcc.add(emailValid);
         this.cc.add(emailValid);

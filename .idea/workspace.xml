@@ -2,7 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c58bcedf-d704-4713-8b19-be73f708db17" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/school/cesar/EmailFailException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/school/cesar/EmailAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/school/cesar/EmailAccount.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/school/cesar/EmailClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/school/cesar/EmailClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/school/cesar/EmailAccountTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/school/cesar/EmailAccountTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/school/cesar/EmailClientTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/school/cesar/EmailClientTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/school/cesar/EmailClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/school/cesar/EmailClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/jacoco.exec" beforeDir="false" afterPath="$PROJECT_DIR$/target/jacoco.exec" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-sessions.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/jacoco-sessions.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco.csv" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/jacoco.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/jacoco.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/school.cesar/EmailClient.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/school.cesar/EmailClient.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/school.cesar/EmailClient.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/school.cesar/EmailClient.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/school.cesar/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/school.cesar/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/school.cesar/index.source.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/school.cesar/index.source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sonar/report-task.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/sonar/report-task.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sonar/ucfg/java/ucfg_29.proto" beforeDir="false" afterPath="$PROJECT_DIR$/target/sonar/ucfg/java/ucfg_29.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sonar/ucfg/java/ucfg_31.proto" beforeDir="false" afterPath="$PROJECT_DIR$/target/sonar/ucfg/java/ucfg_31.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-school.cesar.EmailAccountTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-school.cesar.EmailAccountTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-school.cesar.EmailClientTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-school.cesar.EmailClientTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/school.cesar.EmailAccountTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/school.cesar.EmailAccountTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/school.cesar.EmailClientTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/school.cesar.EmailClientTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/school/cesar/EmailClientTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/school/cesar/EmailClientTest.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -50,25 +74,25 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="1" />
-          <entry key="java" value="11" />
+          <entry key="java" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="1" />
-          <entry key="JAVA" value="11" />
+          <entry key="JAVA" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="7" />
-          <entry key="java" value="1620" />
+          <entry key="java" value="1768" />
           <entry key="xml" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1620" />
+          <entry key="JAVA" value="1768" />
           <entry key="PLAIN_TEXT" value="7" />
           <entry key="XML" value="4" />
         </counts>
@@ -78,22 +102,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/school/cesar/utils/EmailBuilder.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/school/cesar/EmailClientTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1292">
-              <caret line="232" column="77" selection-start-line="232" selection-start-column="77" selection-end-line="232" selection-end-column="77" />
+            <state relative-caret-position="175">
+              <caret line="191" column="67" selection-start-line="191" selection-start-column="67" selection-end-line="191" selection-end-column="67" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#setUpTest#0;class#EmailClientTest#0" />
@@ -105,7 +117,6 @@
                 <element signature="method#isValidEmailTest_WithFromInvalid_False#0;class#EmailClientTest#0" />
                 <element signature="method#isValidEmailTest_WithPasswordValid_Sucess#0;class#EmailClientTest#0" />
                 <element signature="method#emailListTest_WithPasswordInvalid_Sucess#0;class#EmailClientTest#0" />
-                <element signature="method#emailListTest_WithPasswordExpiration_Fail#0;class#EmailClientTest#0" />
                 <element signature="method#emailListTest_WithPasswordInvalid_Fail#0;class#EmailClientTest#0" />
                 <element signature="method#sendEmailTest_WithEmailValid_Sucess#0;class#EmailClientTest#0" />
                 <element signature="method#sendEmailTest_WithEmailInvalid_Fail#0;class#EmailClientTest#0" />
@@ -142,12 +153,14 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/school/cesar/EmailAccountTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1224">
-              <caret line="87" column="50" selection-start-line="87" selection-start-column="50" selection-end-line="87" selection-end-column="50" />
+            <state relative-caret-position="106">
+              <caret line="69" column="64" selection-start-line="69" selection-start-column="64" selection-end-line="69" selection-end-column="64" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#userValidTest_True#0;class#EmailAccountTest#0" />
+                <element signature="method#userInvalidTest_False#0;class#EmailAccountTest#0" />
+                <element signature="method#domainValidTest_True#0;class#EmailAccountTest#0" />
                 <element signature="method#domainInvalidTest_False#0;class#EmailAccountTest#0" />
-                <element signature="method#passwordExpirationTest_False#0;class#EmailAccountTest#0" />
                 <element signature="method#setLastPasswordUpdateTest_Sucess#0;class#EmailAccountTest#0" />
               </folding>
             </state>
@@ -169,11 +182,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/school/cesar/EmailAccount.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="37" column="9" selection-start-line="37" selection-start-column="9" selection-end-line="37" selection-end-column="9" />
+            <state relative-caret-position="228">
+              <caret line="30" column="45" selection-start-line="30" selection-start-column="45" selection-end-line="30" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#EmailAccount#1;class#EmailAccount#0" />
+                <element signature="method#verifyPasswordExpiration#0;class#EmailAccount#0" />
                 <element signature="method#validUser#0;class#EmailAccount#0" />
                 <element signature="method#validDomain#0;class#EmailAccount#0" />
               </folding>
@@ -196,12 +210,25 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/school/cesar/EmailClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="82" lean-forward="true" selection-start-line="82" selection-end-line="82" />
+            <state relative-caret-position="361">
+              <caret line="94" column="118" selection-start-line="94" selection-start-column="118" selection-end-line="94" selection-end-column="118" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#325#326#0" expanded="true" />
                 <element signature="e#373#374#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/school/cesar/EmailFailException.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="5" lean-forward="true" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+              <folding>
+                <element signature="e#128#129#0" expanded="true" />
+                <element signature="e#151#152#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -232,11 +259,12 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/test/java/school/cesar/EmailTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/school/cesar/EmailAccount.java" />
         <option value="$PROJECT_DIR$/src/main/java/school/cesar/Email.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/school/cesar/utils/MockitoExtension.java" />
+        <option value="$PROJECT_DIR$/src/main/java/school/cesar/EmailFailException.java" />
         <option value="$PROJECT_DIR$/src/test/java/school/cesar/EmailClientTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/school/cesar/EmailAccount.java" />
         <option value="$PROJECT_DIR$/src/test/java/school/cesar/EmailAccountTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/school/cesar/EmailClient.java" />
       </list>
@@ -365,7 +393,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537548370112" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537550589443" />
     <property name="last_opened_file_path" value="$USER_HOME$/IdeaProjects/unittest" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
@@ -384,7 +412,7 @@
     </option>
   </component>
   <component name="RunManager" selected="JUnit.school.cesar in unitProject">
-    <configuration name="EmailClientTest.createAccountTest_WithDomainInvalid_UserAndPasswordValid_False" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="EmailAccountTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="unitProject" />
       <extension name="coverage">
         <pattern>
@@ -393,14 +421,28 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="school.cesar" />
-      <option name="MAIN_CLASS_NAME" value="school.cesar.EmailClientTest" />
-      <option name="METHOD_NAME" value="createAccountTest_WithDomainInvalid_UserAndPasswordValid_False" />
+      <option name="MAIN_CLASS_NAME" value="school.cesar.EmailAccountTest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EmailAccountTest.passwordExpirationTest_True" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="unitProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="school.cesar.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="school.cesar" />
+      <option name="MAIN_CLASS_NAME" value="school.cesar.EmailAccountTest" />
+      <option name="METHOD_NAME" value="passwordExpirationTest_True" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EmailClientTest.createAccountTest_WithPasswordInvalid_UserAndDomainValid_False" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="EmailClientTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="unitProject" />
       <extension name="coverage">
         <pattern>
@@ -410,13 +452,11 @@
       </extension>
       <option name="PACKAGE_NAME" value="school.cesar" />
       <option name="MAIN_CLASS_NAME" value="school.cesar.EmailClientTest" />
-      <option name="METHOD_NAME" value="createAccountTest_WithPasswordInvalid_UserAndDomainValid_False" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EmailClientTest.createAccountTest_WithUserInvalidAndDomainPasswordValid_False" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="EmailClientTest.emailListTest_WithPasswordExpiration_Fail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="unitProject" />
       <extension name="coverage">
         <pattern>
@@ -426,7 +466,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="school.cesar" />
       <option name="MAIN_CLASS_NAME" value="school.cesar.EmailClientTest" />
-      <option name="METHOD_NAME" value="createAccountTest_WithUserInvalidAndDomainPasswordValid_False" />
+      <option name="METHOD_NAME" value="emailListTest_WithPasswordExpiration_Fail" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -446,34 +486,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="school.cesar.utils in unitProject" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="unitProject" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="school.cesar.utils.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="school.cesar.utils" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
-      <item itemvalue="JUnit.EmailClientTest.createAccountTest_WithUserInvalidAndDomainPasswordValid_False" />
-      <item itemvalue="JUnit.EmailClientTest.createAccountTest_WithDomainInvalid_UserAndPasswordValid_False" />
-      <item itemvalue="JUnit.EmailClientTest.createAccountTest_WithPasswordInvalid_UserAndDomainValid_False" />
       <item itemvalue="JUnit.school.cesar in unitProject" />
-      <item itemvalue="JUnit.school.cesar.utils in unitProject" />
+      <item itemvalue="JUnit.EmailClientTest.emailListTest_WithPasswordExpiration_Fail" />
+      <item itemvalue="JUnit.EmailClientTest" />
+      <item itemvalue="JUnit.EmailAccountTest" />
+      <item itemvalue="JUnit.EmailAccountTest.passwordExpirationTest_True" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.school.cesar in unitProject" />
-        <item itemvalue="JUnit.school.cesar.utils in unitProject" />
-        <item itemvalue="JUnit.EmailClientTest.createAccountTest_WithPasswordInvalid_UserAndDomainValid_False" />
-        <item itemvalue="JUnit.EmailClientTest.createAccountTest_WithDomainInvalid_UserAndPasswordValid_False" />
-        <item itemvalue="JUnit.EmailClientTest.createAccountTest_WithUserInvalidAndDomainPasswordValid_False" />
+        <item itemvalue="JUnit.EmailAccountTest.passwordExpirationTest_True" />
+        <item itemvalue="JUnit.EmailAccountTest" />
+        <item itemvalue="JUnit.EmailClientTest" />
+        <item itemvalue="JUnit.EmailClientTest.emailListTest_WithPasswordExpiration_Fail" />
       </list>
     </recent_temporary>
   </component>
@@ -491,34 +517,34 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="EmailClientTest_testSendEmailWithEmailValid - 2018.09.15 at 09h 40m 29s.xml">
-      <configuration name="EmailClientTest.testSendEmailWithEmailValid" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="EmailClientTest_createAccountTest_WithUserInvalidAndDomainPasswordValid_False - 2018.09.15 at 10h 07m 54s.xml">
-      <configuration name="EmailClientTest.createAccountTest_WithUserInvalidAndDomainPasswordValid_False" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="EmailClientTest_createAccountTest_WithDomainInvalid_UserAndPasswordValid_False - 2018.09.15 at 10h 09m 33s.xml">
-      <configuration name="EmailClientTest.createAccountTest_WithDomainInvalid_UserAndPasswordValid_False" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="EmailClientTest_createAccountTest_WithPasswordInvalid_UserAndDomainValid_False - 2018.09.15 at 10h 10m 23s.xml">
-      <configuration name="EmailClientTest.createAccountTest_WithPasswordInvalid_UserAndDomainValid_False" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="school_cesar_in_unitProject - 2018.09.15 at 10h 14m 27s.xml">
-      <configuration name="school.cesar in unitProject" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="school_cesar_in_unitProject - 2018.09.21 at 13h 09m 42s.xml">
-      <configuration name="school.cesar in unitProject" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="school_cesar_utils_in_unitProject - 2018.09.21 at 13h 33m 19s.xml">
-      <configuration name="school.cesar.utils in unitProject" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="school_cesar_in_unitProject - 2018.09.21 at 13h 33m 40s.xml">
-      <configuration name="school.cesar in unitProject" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="school_cesar_utils_in_unitProject - 2018.09.21 at 13h 45m 12s.xml">
       <configuration name="school.cesar.utils in unitProject" configurationId="JUnit" />
     </history-entry>
     <history-entry file="school_cesar_in_unitProject - 2018.09.21 at 13h 46m 22s.xml">
+      <configuration name="school.cesar in unitProject" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="school_cesar_in_unitProject - 2018.09.21 at 14h 08m 57s.xml">
+      <configuration name="school.cesar in unitProject" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="EmailClientTest_emailListTest_WithPasswordExpiration_Fail - 2018.09.21 at 14h 16m 19s.xml">
+      <configuration name="EmailClientTest.emailListTest_WithPasswordExpiration_Fail" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="EmailClientTest_emailListTest_WithPasswordExpiration_Fail - 2018.09.21 at 14h 19m 30s.xml">
+      <configuration name="EmailClientTest.emailListTest_WithPasswordExpiration_Fail" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="EmailClientTest_emailListTest_WithPasswordExpiration_Fail - 2018.09.21 at 14h 20m 29s.xml">
+      <configuration name="EmailClientTest.emailListTest_WithPasswordExpiration_Fail" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="EmailClientTest - 2018.09.21 at 14h 21m 51s.xml">
+      <configuration name="EmailClientTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="EmailAccountTest - 2018.09.21 at 14h 22m 01s.xml">
+      <configuration name="EmailAccountTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="EmailAccountTest_passwordExpirationTest_True - 2018.09.21 at 14h 22m 59s.xml">
+      <configuration name="EmailAccountTest.passwordExpirationTest_True" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="school_cesar_in_unitProject - 2018.09.21 at 14h 23m 14s.xml">
       <configuration name="school.cesar in unitProject" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -563,10 +589,14 @@
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/school/cesar/EmailService.java</url>
           <line>7</line>
-          <properties class="school.cesar.EmailService" method="sendEmail">
-            <option name="EMULATED" value="true" />
-          </properties>
+          <properties class="school.cesar.EmailService" method="sendEmail" />
           <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/school/cesar/EmailAccountTest.java</url>
+          <line>77</line>
+          <properties />
+          <option name="timeStamp" value="60" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -589,33 +619,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/school/cesar/EmailClientTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1292">
-          <caret line="232" column="77" selection-start-line="232" selection-start-column="77" selection-end-line="232" selection-end-column="77" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#setUpTest#0;class#EmailClientTest#0" />
-            <element signature="method#isValidEmailTest_withEmailValid_True#0;class#EmailClientTest#0" />
-            <element signature="method#isValidEmailTest_WithoutCreationDate_False#0;class#EmailClientTest#0" />
-            <element signature="method#isValidEmailTest_WithEmailTOInvalid_False#0;class#EmailClientTest#0" />
-            <element signature="method#isValidEmailTest_WithEmailCCInvalid_False#0;class#EmailClientTest#0" />
-            <element signature="method#isValidEmailTest_WithEmailBCCInvalid_False#0;class#EmailClientTest#0" />
-            <element signature="method#isValidEmailTest_WithFromInvalid_False#0;class#EmailClientTest#0" />
-            <element signature="method#isValidEmailTest_WithPasswordValid_Sucess#0;class#EmailClientTest#0" />
-            <element signature="method#emailListTest_WithPasswordInvalid_Sucess#0;class#EmailClientTest#0" />
-            <element signature="method#emailListTest_WithPasswordExpiration_Fail#0;class#EmailClientTest#0" />
-            <element signature="method#emailListTest_WithPasswordInvalid_Fail#0;class#EmailClientTest#0" />
-            <element signature="method#sendEmailTest_WithEmailValid_Sucess#0;class#EmailClientTest#0" />
-            <element signature="method#sendEmailTest_WithEmailInvalid_Fail#0;class#EmailClientTest#0" />
-            <element signature="method#createAccountTest_WithUserDomainPasswordValid_True#0;class#EmailClientTest#0" />
-            <element signature="method#createAccountTest_WithUserInvalid_DomainAndPasswordValid_False#0;class#EmailClientTest#0" />
-            <element signature="method#createAccountTest_WithDomainInvalid_UserAndPasswordValid_False#0;class#EmailClientTest#0" />
-            <element signature="method#createAccountTest_WithPasswordInvalid_UserAndDomainValid_False#0;class#EmailClientTest#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/school/cesar/EmailService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -633,38 +636,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/school/cesar/EmailAccountTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1224">
-          <caret line="87" column="50" selection-start-line="87" selection-start-column="50" selection-end-line="87" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#domainInvalidTest_False#0;class#EmailAccountTest#0" />
-            <element signature="method#passwordExpirationTest_False#0;class#EmailAccountTest#0" />
-            <element signature="method#setLastPasswordUpdateTest_Sucess#0;class#EmailAccountTest#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/school/cesar/Email.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="31" selection-start-line="31" selection-end-line="31" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/school/cesar/EmailAccount.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="37" column="9" selection-start-line="37" selection-start-column="9" selection-end-line="37" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#EmailAccount#1;class#EmailAccount#0" />
-            <element signature="method#validUser#0;class#EmailAccount#0" />
-            <element signature="method#validDomain#0;class#EmailAccount#0" />
           </folding>
         </state>
       </provider>
@@ -686,10 +663,76 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/school/cesar/EmailFailException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="5" lean-forward="true" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+          <folding>
+            <element signature="e#128#129#0" expanded="true" />
+            <element signature="e#151#152#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/school/cesar/EmailClientTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="191" column="67" selection-start-line="191" selection-start-column="67" selection-end-line="191" selection-end-column="67" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#setUpTest#0;class#EmailClientTest#0" />
+            <element signature="method#isValidEmailTest_withEmailValid_True#0;class#EmailClientTest#0" />
+            <element signature="method#isValidEmailTest_WithoutCreationDate_False#0;class#EmailClientTest#0" />
+            <element signature="method#isValidEmailTest_WithEmailTOInvalid_False#0;class#EmailClientTest#0" />
+            <element signature="method#isValidEmailTest_WithEmailCCInvalid_False#0;class#EmailClientTest#0" />
+            <element signature="method#isValidEmailTest_WithEmailBCCInvalid_False#0;class#EmailClientTest#0" />
+            <element signature="method#isValidEmailTest_WithFromInvalid_False#0;class#EmailClientTest#0" />
+            <element signature="method#isValidEmailTest_WithPasswordValid_Sucess#0;class#EmailClientTest#0" />
+            <element signature="method#emailListTest_WithPasswordInvalid_Sucess#0;class#EmailClientTest#0" />
+            <element signature="method#emailListTest_WithPasswordInvalid_Fail#0;class#EmailClientTest#0" />
+            <element signature="method#sendEmailTest_WithEmailValid_Sucess#0;class#EmailClientTest#0" />
+            <element signature="method#sendEmailTest_WithEmailInvalid_Fail#0;class#EmailClientTest#0" />
+            <element signature="method#createAccountTest_WithUserDomainPasswordValid_True#0;class#EmailClientTest#0" />
+            <element signature="method#createAccountTest_WithUserInvalid_DomainAndPasswordValid_False#0;class#EmailClientTest#0" />
+            <element signature="method#createAccountTest_WithDomainInvalid_UserAndPasswordValid_False#0;class#EmailClientTest#0" />
+            <element signature="method#createAccountTest_WithPasswordInvalid_UserAndDomainValid_False#0;class#EmailClientTest#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/school/cesar/EmailAccountTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="69" column="64" selection-start-line="69" selection-start-column="64" selection-end-line="69" selection-end-column="64" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#userValidTest_True#0;class#EmailAccountTest#0" />
+            <element signature="method#userInvalidTest_False#0;class#EmailAccountTest#0" />
+            <element signature="method#domainValidTest_True#0;class#EmailAccountTest#0" />
+            <element signature="method#domainInvalidTest_False#0;class#EmailAccountTest#0" />
+            <element signature="method#setLastPasswordUpdateTest_Sucess#0;class#EmailAccountTest#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/school/cesar/EmailAccount.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="30" column="45" selection-start-line="30" selection-start-column="45" selection-end-line="30" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#EmailAccount#1;class#EmailAccount#0" />
+            <element signature="method#verifyPasswordExpiration#0;class#EmailAccount#0" />
+            <element signature="method#validUser#0;class#EmailAccount#0" />
+            <element signature="method#validDomain#0;class#EmailAccount#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/school/cesar/EmailClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="82" lean-forward="true" selection-start-line="82" selection-end-line="82" />
+        <state relative-caret-position="361">
+          <caret line="94" column="118" selection-start-line="94" selection-start-column="118" selection-end-line="94" selection-end-column="118" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#325#326#0" expanded="true" />
