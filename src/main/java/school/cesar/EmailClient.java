@@ -27,11 +27,17 @@ public class EmailClient {
         }
     }
 
+    public boolean isValidCreationDate(Email email){
+        if (email.getCreationDate() == null) {
+            return false;
+        }
+        return true;
+    }
     public boolean isValidEmail(Email email) {
         List<String> listTo = new ArrayList(email.getTo());
         List<String> listBcc = new ArrayList(email.getBcc());
         List<String> listCC = new ArrayList<>(email.getCc());
-        if (email.getCreationDate() != null) { //verified Create Date
+        if (isValidCreationDate(email)==true) { //verified Create Date
             if (isValidAddress(email.getFrom())==true) { //verified from email
                 for (String emailTo : listTo) {
                     if (isValidAddress(emailTo.toString()) == true) { //verified all to email
